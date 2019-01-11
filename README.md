@@ -14,7 +14,11 @@ As every terminal emulator has different options on how to start a new SSH sessi
 
 The `{}` placeholder will be replaced by the hostname.
 
-Example for [Tilix](https://gnunn1.github.io/tilix-web/): `tilix -e 'ssh {}'`
+Examples:
+
+* Konsole: `konsole -e 'ssh {}'`
+* [Tilix](https://gnunn1.github.io/tilix-web/): `tilix -e 'ssh {}'`
+* GNOME Terminal: `gnome-terminal -- ssh {}`
 
 ## Usage
 
