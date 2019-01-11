@@ -57,14 +57,11 @@ class Runner(dbus.service.Object):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: {} <command to execute>".format(sys.argv[0]))
-        print("")
-        print("'{}' in command will be replaced by the hostname")
-        print("")
-        print("Example: {} tilix -e 'ssh {}'".format(sys.argv[0], "{}"))
-        exit()
+    terminal_command = ["konsole", "-e", "ssh {}"]
 
-    runner = Runner(sys.argv[1:])
+    if len(sys.argv) > 1:
+        terminal_command = sys.argv[1:]
+
+    runner = Runner(terminal_command)
     loop = GLib.MainLoop()
     loop.run()

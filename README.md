@@ -6,17 +6,17 @@ A KRunner backend for connecting to SSH hosts listed in your known_hosts file.
 
 * Copy [ssh-runner.desktop](ssh-runner.desktop) to ~/.local/share/kservices5
 * Restart KRunner (`killall krunner; krunner` or logout & login)
-* Start `runner.py <terminal command>` (add it to your startup applications)
+* Start `runner.py` (add it to your startup applications)
 
 ## Terminal Command
 
-As every terminal emulator has different options on how to start a new SSH session, you have to specify the command to open the SSH session as argument passed to `runner.py`.
+As every terminal emulator has different options on how to start a new SSH session, you can specify the command to open the SSH session as argument passed to `runner.py`.
 
 The `{}` placeholder will be replaced by the hostname.
 
 Examples:
 
-* Konsole: `konsole -e 'ssh {}'`
+* Konsole: `konsole -e 'ssh {}'` (default)
 * [Tilix](https://gnunn1.github.io/tilix-web/): `tilix -e 'ssh {}'`
 * GNOME Terminal: `gnome-terminal -- ssh {}`
 
