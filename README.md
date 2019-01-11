@@ -10,7 +10,7 @@ A KRunner backend for connecting to SSH hosts listed in your known_hosts file.
 
 ## Terminal Command
 
-As every terminal emulator has different options on how to start a new SSH session, you can specify the command to open the SSH session as argument passed to `runner.py`.
+As every terminal emulator has different options on how to start a new SSH session, you can specify the command to open the SSH session as arguments passed to `runner.py`.
 
 The `{}` placeholder will be replaced by the hostname.
 
@@ -19,6 +19,8 @@ Examples:
 * Konsole: `konsole -e 'ssh {}'` (default)
 * [Tilix](https://gnunn1.github.io/tilix-web/): `tilix -e 'ssh {}'`
 * GNOME Terminal: `gnome-terminal -- ssh {}`
+
+Example call: `/path/to/runner.py konsole -e 'ssh {}'`
 
 ## Usage
 
