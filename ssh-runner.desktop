@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=SSH Runner
+Comment=Connect to hosts listed in known_hosts file.
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+Icon=terminal
+X-KDE-PluginInfo-Author=Michael Wieland
+X-KDE-PluginInfo-Email=ssh-runner@selfcoders.com
+X-KDE-PluginInfo-Name=SSH Runner
+X-KDE-PluginInfo-Category=Utilities
+X-KDE-PluginInfo-Website=https://selfcoders.com
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=MIT
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=com.selfcoders.ssh-runner
+X-Plasma-DBusRunner-Path=/ssh
