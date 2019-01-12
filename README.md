@@ -5,7 +5,6 @@ A KRunner backend for connecting to SSH hosts listed in your known_hosts file.
 ## Installation
 
 * Copy [ssh-runner.desktop](ssh-runner.desktop) to ~/.local/share/kservices5
-* Restart KRunner (`killall krunner; krunner` or logout & login)
 * Start `runner.py` (add it to your startup applications)
 
 ## Terminal Command
