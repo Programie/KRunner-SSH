@@ -2,6 +2,8 @@
 
 A KRunner backend for connecting to SSH hosts listed in your known_hosts file.
 
+![Screenshot](screenshot.png)
+
 ## Installation
 
 ### Automatic installation
