@@ -4,6 +4,12 @@ A KRunner backend for connecting to SSH hosts listed in your known_hosts file.
 
 ## Installation
 
+### Automatic installation
+
+Simply execute the `install.sh` script and you are ready to go.
+
+### Manual installation
+
 * Copy [ssh-runner.desktop](ssh-runner.desktop) to ~/.local/share/kservices5
 * Copy [ssh-runner.service](ssh-runner.service) to ~/.local/share/dbus-1/services/com.selfcoders.ssh-runner.service
 * Replace "%{BASE_DIR}" with the path to the folder containing the runner.py in ~/.local/share/dbus-1/services/com.selfcoders.ssh-runner.service
