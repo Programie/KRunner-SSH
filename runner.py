@@ -25,6 +25,12 @@ class Runner(dbus.service.Object):
 
     @dbus.service.method(iface, in_signature="s", out_signature="a(sssida{sv})")
     def Match(self, query):
+        query = query.split(" ")
+        if len(query) > 1 and query[0] == "ssh":
+            query = query[1:]
+
+        query = " ".join(query)
+
         known_hosts_file = os.path.join(os.path.expanduser("~"), ".ssh", "known_hosts")
         if not os.path.isfile(known_hosts_file):
             return []
