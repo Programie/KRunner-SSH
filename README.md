@@ -32,3 +32,5 @@ Example call: `/path/to/runner.py konsole -e 'ssh {}'`
 ## Usage
 
 Open KRunner (usually Alt+F2) and search for a host listed in your known_hosts file.
+
+Note: Make sure to disable hashing of your known_hosts file (`HashKnownHOsts no` in your ~/.ssh/config), otherwise SSH Runner can't find any hosts from your known_hosts file.
