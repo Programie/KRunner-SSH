@@ -8,4 +8,5 @@ mkdir -p ~/.local/share/dbus-1/services/
 cp ssh-runner.desktop ~/.local/share/kservices5/
 sed "s|%{BASE_DIR}|${PWD}|g" ssh-runner.service > ~/.local/share/dbus-1/services/com.selfcoders.ssh-runner.service
 
+pip install dbus-python
 kquitapp5 krunner
