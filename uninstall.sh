@@ -1,8 +1,12 @@
-#! /bin/bash
+#!/bin/bash
 
+# Exit if something fails
 set -e
 
-rm ~/.local/share/kservices5/ssh-runner.desktop
-rm ~/.local/share/dbus-1/services/com.selfcoders.ssh-runner.service
+prefix="${XDG_DATA_HOME:-$HOME/.local/share}"
+krunner_dbusdir="$prefix/krunner/dbusplugins"
 
-kquitapp5 krunner
+rm $prefix/dbus-1/services/org.kde.ssh-runner.service
+rm $krunner_dbusdir/ssh-runner.desktop
+
+kquitapp6 krunner

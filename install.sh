@@ -1,12 +1,19 @@
-#! /bin/bash
+#!/bin/bash
+
+NAME=org.kde.ssh-runner
+
+# Standalone install script for copying files
 
 set -e
 
-mkdir -p ~/.local/share/kservices5/
-mkdir -p ~/.local/share/dbus-1/services/
+prefix="${XDG_DATA_HOME:-$HOME/.local/share}"
+krunner_dbusdir="$prefix/krunner/dbusplugins"
+services_dir="$prefix/dbus-1/services/"
 
-cp ssh-runner.desktop ~/.local/share/kservices5/
-sed "s|%{BASE_DIR}|${PWD}|g" ssh-runner.service > ~/.local/share/dbus-1/services/com.selfcoders.ssh-runner.service
+mkdir -p $krunner_dbusdir
+mkdir -p $services_dir
 
-pip install dbus-python
-kquitapp5 krunner
+cp ssh-runner.desktop $krunner_dbusdir
+printf "[D-BUS Service]\nName=$NAME\nExec=\"$PWD/main.py\"" > $services_dir/$NAME.service
+
+kquitapp6 krunner
